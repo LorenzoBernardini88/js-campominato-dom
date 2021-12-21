@@ -1,0 +1,71 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aquamarine;
+}
+header,
+footer{
+    background-color: white;
+    padding: 5px 0px;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    text-align: center;
+    min-height: 500px;
+}
+main img{
+    width: 400px;
+}
+.hidden{
+    display: none;
+}
+
+/* proprietà contenitore in base alla scelta della select option */
+.ms_container1{
+    height: 502px;
+    width: 502px;
+}
+.ms_container2{
+    height: 452px;
+    width: 452px;
+}
+.ms_container3{
+    height: 352px;
+    width: 352px;
+}
+.ms_container1,
+.ms_container2,
+.ms_container3{
+    text-align: center;
+    border: solid 1px black;
+}
+/* proprietà casella */
+.casella{
+    margin: 0 !important;
+    height: 50px;
+    width: 50px;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color{
+    background-color:mediumpurple;
+    color: white;
+}
+.casella:hover{
+    cursor: pointer;
+}
+
+
