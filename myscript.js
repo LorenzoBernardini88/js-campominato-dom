@@ -7,27 +7,26 @@ button.addEventListener("click", function(){
     let scelta = document.getElementById('select').value;
     let griglia = document.getElementById('ms_griglia');// selezionio div contenitore griglia richiamando la classe.
     griglia.innerHTML = '';
+    griglia.classList.remove('container');
+
 
     
     if(scelta == 1){
-        
+
+        griglia.classList.add('ms_container1')
         for(i=1; i<=100; i++){
-            griglia.classList.remove('container');
-            griglia.classList.add('ms_container1');
             griglia.innerHTML += `<div class="casella">${i}</div>`;
         }
     }else if(scelta == 2) {
-        
+
+        griglia.classList.add('ms_container2');
         for(i=1; i<=81; i++){
-            griglia.classList.remove('container');
-            griglia.classList.add('ms_container2');
             griglia.innerHTML += `<div class="casella">${i}</div>`;
         }
     }else {
         
+        griglia.classList.add('ms_container3');
         for(i=1; i<=49; i++){
-            griglia.classList.remove('container');
-            griglia.classList.add('ms_container3');
             griglia.innerHTML += `<div class="casella">${i}</div>`;
         }
     }
@@ -46,15 +45,14 @@ button.addEventListener("click", function(){
     const numBomb = 16;
     let bombArr = [];
 
-    for(i=0; i< numBomb; i++){
+    for(i=0; i< numBomb;){
         
         let numRandom = Math.floor(Math.random()*100 +1);
-        if(bombArr.includes(numRandom)){
-            i--;
-        }else{
+        if(!bombArr.includes(numRandom)){
+            
             bombArr.push(numRandom);
+            i++;
         }
-        
     }
     console.log(bombArr);
 
