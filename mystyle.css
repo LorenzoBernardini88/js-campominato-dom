@@ -64,6 +64,11 @@ main img{
     background-color:mediumpurple;
     color: white;
 }
+.red{
+    background-color: red;
+    color: white;
+
+}
 .casella:hover{
     cursor: pointer;
 }
