@@ -40,6 +40,23 @@ button.addEventListener("click", function(){
             this.classList.add('color');
         })
     }
+
 })
+
+    const numBomb = 16;
+    let bombArr = [];
+
+    for(i=0; i< numBomb; i++){
+        
+        let numRandom = Math.floor(Math.random()*100 +1);
+        if(bombArr.includes(numRandom)){
+            i--;
+        }else{
+            bombArr.push(numRandom);
+        }
+        
+    }
+    console.log(bombArr);
+
 
 
