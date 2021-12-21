@@ -24,13 +24,12 @@ button.addEventListener("click", function(){
             griglia.innerHTML += `<div class="casella">${i}</div>`;
         }
     }else {
-        
+
         griglia.classList.add('ms_container3');
         for(i=1; i<=49; i++){
             griglia.innerHTML += `<div class="casella">${i}</div>`;
         }
     }
-    
     let box = document.getElementsByClassName('casella');
     for (i=0; i<box.length; i++) {
         
@@ -39,12 +38,12 @@ button.addEventListener("click", function(){
             this.classList.add('color');
         })
     }
-
+    
 })
-
-    const numBomb = 16;
-    let bombArr = [];
-
+let bombArr = [];
+function generaBomb(bombArr){
+        let risultato =  bombArr;
+        const numBomb = 16;
     for(i=0; i< numBomb;){
         
         let numRandom = Math.floor(Math.random()*100 +1);
@@ -54,7 +53,10 @@ button.addEventListener("click", function(){
             i++;
         }
     }
-    console.log(bombArr);
+    return risultato
+}
+    
+    console.log(generaBomb(bombArr));
 
 
 
